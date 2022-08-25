@@ -1,6 +1,5 @@
-package demo;
+package app;
 
-import app.Application;
 import factories.GUIFactory;
 import factories.MacOSFactory;
 import factories.WindowsFactory;

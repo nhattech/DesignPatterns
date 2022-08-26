@@ -10,11 +10,13 @@ import strategy.IDiscount;
 
 public class AppMain {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		// create new context
 		Ticket ticket = new Ticket("New ticket", 100);
 		System.out.println(ticket);
-
 		
 		IDiscount discount;
 		Random rd = new Random();

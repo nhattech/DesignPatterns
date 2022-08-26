@@ -2,7 +2,7 @@ package listeners;
 
 import java.io.File;
 
-public class LogOpenListener implements EventListener {
+public class LogOpenListener implements IEventListener {
     private File log;
 
     public LogOpenListener(String fileName) {

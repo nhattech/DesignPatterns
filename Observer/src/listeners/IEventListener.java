@@ -2,7 +2,7 @@ package listeners;
 
 import java.io.File;
 
-public interface EventListener {
+public interface IEventListener {
 
 	void update(String eventType, File file);
 

@@ -1,28 +1,45 @@
 package client;
 
+import java.util.Random;
+
 import context.Ticket;
 import strategy.Discount10;
 import strategy.Discount50;
 import strategy.Discount90;
+import strategy.IDiscount;
 
 public class AppMain {
 
 	public static void main(String[] args) {
-		//create new context
-		Ticket ticket = new Ticket("t1", 100);
-		System.out.println("New ticket: " + ticket);
-		
-		//set strategy
-		ticket.setDiscount(new Discount10());
-		System.out.println("Discount10: " + ticket.getDiscountPrice());
-		
-		//set other strategy
-		ticket.setDiscount(new Discount50());
-		System.out.println("Discount50: " + ticket.getDiscountPrice());
+		// create new context
+		Ticket ticket = new Ticket("New ticket", 100);
+		System.out.println(ticket);
 
-		//set other strategy
-		ticket.setDiscount(new Discount90());
-		System.out.println("Discount90: " + ticket.getDiscountPrice());
+		
+		IDiscount discount;
+		Random rd = new Random();
+		for (int i = 1; i <= 5; i++) {
+			int strategyIndex = rd.nextInt(3);
+			
+			//Random discount
+			switch (strategyIndex) {
+			case 0:
+				discount = new Discount10();
+				break;
+			case 1:
+				discount = new Discount50();
+				break;
+			default:
+				discount = new Discount90();
+				break;
+			}
+			
+			// set other strategy: discount
+			ticket.setDiscount(discount);
+			
+			System.out.println(discount.getClass().getSimpleName() + ": " + 
+			ticket.getDiscountPrice());
+		}
 	}
 
 }

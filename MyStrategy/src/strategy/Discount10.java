@@ -1,6 +1,6 @@
 package strategy;
 
-public class Discount10 implements IPattern{
+public class Discount10 implements IDiscount{
 
 	@Override
 	public double doDiscount(double price) {

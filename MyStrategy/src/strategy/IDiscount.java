@@ -1,5 +1,5 @@
 package strategy;
 
-public interface IPattern {
+public interface IDiscount {
 	public double doDiscount(double price);
 }

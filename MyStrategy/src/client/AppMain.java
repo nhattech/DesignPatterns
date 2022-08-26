@@ -13,15 +13,15 @@ public class AppMain {
 		System.out.println("New ticket: " + ticket);
 		
 		//set strategy
-		ticket.setPatter(new Discount10());
+		ticket.setDiscount(new Discount10());
 		System.out.println("Discount10: " + ticket.getDiscountPrice());
 		
 		//set other strategy
-		ticket.setPatter(new Discount50());
+		ticket.setDiscount(new Discount50());
 		System.out.println("Discount50: " + ticket.getDiscountPrice());
 
 		//set other strategy
-		ticket.setPatter(new Discount90());
+		ticket.setDiscount(new Discount90());
 		System.out.println("Discount90: " + ticket.getDiscountPrice());
 	}
 

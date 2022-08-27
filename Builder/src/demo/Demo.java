@@ -1,9 +1,15 @@
 package demo;
 
+import builders.Builder;
 import builders.CarBuilder;
 import builders.CarManualBuilder;
 import cars.Car;
+import cars.CarType;
 import cars.Manual;
+import components.Engine;
+import components.GPSNavigator;
+import components.Transmission;
+import components.TripComputer;
 import director.Director;
 
 /**
@@ -33,6 +39,18 @@ public class Demo {
         director.constructSportsCar(manualBuilder);
         Manual carManual = manualBuilder.getResult();
         System.out.println("\nCar manual built:\n" + carManual.print());
+        
+        //No use Director
+        CarManualBuilder builder2 = new CarManualBuilder();
+        builder2.setCarType(CarType.SPORTS_CAR);
+        builder2.setEngine(new Engine(3.0, 0));      
+        builder2.setSeats(2);
+        builder2.setTransmission(Transmission.SEMI_AUTOMATIC);
+        builder2.setTripComputer(new TripComputer());
+        builder2.setGPSNavigator(new GPSNavigator());
+        
+        Manual carManual2 = builder2.getResult();
+        System.out.println("\nCar2: " + carManual2.print());      
     }
 
 }

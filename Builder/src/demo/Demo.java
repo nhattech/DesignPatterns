@@ -1,6 +1,5 @@
 package demo;
 
-import builders.Builder;
 import builders.CarBuilder;
 import builders.CarManualBuilder;
 import cars.Car;

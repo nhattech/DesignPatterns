@@ -13,3 +13,4 @@ public class HtmlDialog extends Dialog {
         return new HtmlButton();
     }
 }
+ 

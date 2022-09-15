@@ -5,7 +5,7 @@ That makes it possible to produce different products using the same construction
 
 /*--------------------------------------*/
 
-Builder là một mẫu thiết kế sáng tạo, 
+Builder là một mẫu thiết kế sáng tạo, thuộc nhóm khởi tạo (Creational)
 cho phép xây dựng các đối tượng phức tạp theo từng bước.
 
 Không giống như các mẫu sáng tạo khác, 
